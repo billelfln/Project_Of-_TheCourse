@@ -19,6 +19,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // Add view composers for language-related data
+        view()->composer('*', function ($view) {
+            $view->with([
+                'currentLocale' => app()->getLocale(),
+                'availableLocales' => config('app.available_locales'),
+                'isRtl' => app()->getLocale() === 'ar',
+            ]);
+        });
     }
 }

@@ -1,5 +1,6 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
 import forms from '@tailwindcss/forms';
+import rtl from 'tailwindcss-rtl';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -13,9 +14,10 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                arabic: ['Noto Sans Arabic', 'Figtree', ...defaultTheme.fontFamily.sans],
             },
         },
     },
 
-    plugins: [forms],
+    plugins: [forms, rtl],
 };
