@@ -8,7 +8,11 @@ use App\Http\Controllers\JobVacancyController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
+use GuzzleHttp\Middleware;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Http\Request;
 
 Route::middleware(['auth','role:company-owner,admin'])->group(function () {
     Route::get('/', [DashbordController::class, 'index'])->name('dashboard');

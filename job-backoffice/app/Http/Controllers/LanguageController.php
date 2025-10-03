@@ -12,6 +12,7 @@ class LanguageController extends Controller
      */
     public function switch(Request $request)
     {
+   
         $locale = $request->input('locale');
         
         // Validate that the locale is available

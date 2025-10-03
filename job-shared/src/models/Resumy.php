@@ -25,7 +25,7 @@ class Resumy extends Model
         'education',
         'deleted_at',
         'userId',
-
+        
     ];
 
     protected $dates = ['deleted_at'];
@@ -37,7 +37,7 @@ class Resumy extends Model
 
     public function jobApplications()
     {
-        return $this->hasMany(JobApllication::class, 'resumeId');
+        return $this->hasMany(JobApplication::class, 'resumeId');
     }
 
 

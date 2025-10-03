@@ -1,5 +1,6 @@
 @php
     $currentLocale = app()->getLocale();
+
     $availableLocales = config('app.available_locales');
     $flagEmojis = [
         'en' => '🇺🇸',
